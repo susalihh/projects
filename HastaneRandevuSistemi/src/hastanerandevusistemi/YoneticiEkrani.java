@@ -74,7 +74,7 @@ public class YoneticiEkrani extends javax.swing.JFrame {
 
         secimComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hasta Yönetim", "Doktor Yönetim" }));
 
-        jButton1.setBackground(new java.awt.Color(82, 179, 217));
+        jButton1.setBackground(new java.awt.Color(255, 51, 51));
         jButton1.setText("Geri");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

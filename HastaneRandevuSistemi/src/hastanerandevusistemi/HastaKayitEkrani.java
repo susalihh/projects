@@ -108,7 +108,7 @@ public class HastaKayitEkrani extends javax.swing.JFrame {
             }
         });
 
-        geriButton.setBackground(new java.awt.Color(82, 179, 217));
+        geriButton.setBackground(new java.awt.Color(255, 51, 51));
         geriButton.setText("Geri");
         geriButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,7 +183,7 @@ public class HastaKayitEkrani extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 25)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Yeni Kayıt");
+        jLabel1.setText("Yeni Hasta Kayıt");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

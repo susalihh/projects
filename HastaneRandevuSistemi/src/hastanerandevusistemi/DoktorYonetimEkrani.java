@@ -132,7 +132,7 @@ public class DoktorYonetimEkrani extends javax.swing.JFrame {
 
         bransComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BESLENME VE DİYET", "ÇOCUK SAĞLIĞI VE HASTALIKLARI", "FİZİKSEL TIP VE REHABİLİTASYON", "GÖZ HASTALIKLARI", "KULAK - BURUN - BOĞAZ HASTALIKLARI", "ORTOPEDİ", "PSİKİYATRİ" }));
 
-        jButton1.setBackground(new java.awt.Color(82, 179, 217));
+        jButton1.setBackground(new java.awt.Color(255, 51, 51));
         jButton1.setText("Geri");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,8 +277,7 @@ public class DoktorYonetimEkrani extends javax.swing.JFrame {
         int hastaId = Integer.parseInt(idTextField.getText());
         
         DoktorIslemler di = new DoktorIslemler(hastaId,null,null,null);
-        di.doktorKayitSil();
-        JOptionPane.showMessageDialog(null, "Kayıt Silindi");        
+        di.doktorKayitSil();       
     }//GEN-LAST:event_kayitSilButtonActionPerformed
 
     private void kayitEkleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kayitEkleButtonActionPerformed

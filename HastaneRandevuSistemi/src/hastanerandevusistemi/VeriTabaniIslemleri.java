@@ -115,15 +115,8 @@ public class VeriTabaniIslemleri implements Baglanti {
             Statement st = con.createStatement();
             String sorgu = String.format("DELETE FROM hastalar WHERE hastaId="+hastaId);
             st.executeUpdate(sorgu);
-            
-            Statement st2 = con.createStatement();
-            String sorgu2 = String.format("select * from hastalar");
-            rs2 = st2.executeQuery(sorgu2);
-            while(rs2.next()){
-                if( hastaId == rs2.getInt("hastaId")){
-            }else{
-                    JOptionPane.showMessageDialog(null, "Kayıt Bulunamadı !");}               
-            }            
+            JOptionPane.showMessageDialog(null, "Kayıt Silindi"); 
+                
             }
         catch(Exception e){
             e.printStackTrace();            
@@ -223,6 +216,8 @@ public class VeriTabaniIslemleri implements Baglanti {
             Statement st = con.createStatement();
             String sorgu = String.format("DELETE FROM doktorlar WHERE doktorId="+doktorId);
             st.executeUpdate(sorgu);
+            
+            JOptionPane.showMessageDialog(null, "Kayıt Silindi");             
         }catch(Exception e){
             e.printStackTrace();
         }

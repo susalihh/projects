@@ -89,7 +89,7 @@ public class DoktorYonetimEkrani extends javax.swing.JFrame {
         });
 
         kayitListeleButton.setBackground(new java.awt.Color(82, 179, 217));
-        kayitListeleButton.setText("DOKTORLARI LİSTELE");
+        kayitListeleButton.setText("LİSTELE");
         kayitListeleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kayitListeleButtonActionPerformed(evt);
@@ -161,7 +161,7 @@ public class DoktorYonetimEkrani extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING)

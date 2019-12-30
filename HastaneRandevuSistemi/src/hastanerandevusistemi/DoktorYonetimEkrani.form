@@ -93,7 +93,7 @@
                           </Group>
                           <Component id="jScrollPane2" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel28" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel29" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -202,7 +202,7 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d9" green="b3" red="52" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="DOKTORLARI L&#x130;STELE"/>
+                <Property name="text" type="java.lang.String" value="L&#x130;STELE"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kayitListeleButtonActionPerformed"/>

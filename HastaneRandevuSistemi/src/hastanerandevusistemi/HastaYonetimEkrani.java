@@ -87,7 +87,7 @@ public class HastaYonetimEkrani extends javax.swing.JFrame {
         jScrollPane2.setViewportView(table);
 
         listeleButton.setBackground(new java.awt.Color(82, 179, 217));
-        listeleButton.setText("HASTALARI LİSTELE");
+        listeleButton.setText("LİSTELE");
         listeleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 listeleButtonActionPerformed(evt);
@@ -329,7 +329,6 @@ public class HastaYonetimEkrani extends javax.swing.JFrame {
         int hastaId = Integer.parseInt(tcNoTextField.getText());                
         HastaIslemler hi = new HastaIslemler(hastaId,0,null,null,null,null,null);
         hi.hastaKayitSil();
-        JOptionPane.showMessageDialog(null, "Kayıt Silindi");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void cinsiyetComboBox4İtemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cinsiyetComboBox4İtemStateChanged

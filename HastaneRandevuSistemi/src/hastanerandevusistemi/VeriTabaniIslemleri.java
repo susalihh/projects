@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class VeriTabaniIslemleri implements Baglanti {
+    
      static String kullanici_adi="root";
      static String parola="";
      static String db_ismi="hastane";
@@ -57,6 +58,7 @@ public class VeriTabaniIslemleri implements Baglanti {
      String saat;
     
    public VeriTabaniIslemleri(){}
+   
       
    public VeriTabaniIslemleri(int hastaId,int hastaTc,String hastaAd,String hastaSoyad,String hastaSifre,String hastaTelefon,String hastaCinsiyet){
         this.hastaId=hastaId;
@@ -113,8 +115,18 @@ public class VeriTabaniIslemleri implements Baglanti {
             Statement st = con.createStatement();
             String sorgu = String.format("DELETE FROM hastalar WHERE hastaId="+hastaId);
             st.executeUpdate(sorgu);
-        }catch(Exception e){
-            e.printStackTrace();
+            
+            Statement st2 = con.createStatement();
+            String sorgu2 = String.format("select * from hastalar");
+            rs2 = st2.executeQuery(sorgu2);
+            while(rs2.next()){
+                if( hastaId == rs2.getInt("hastaId")){
+            }else{
+                    JOptionPane.showMessageDialog(null, "Kayıt Bulunamadı !");}               
+            }            
+            }
+        catch(Exception e){
+            e.printStackTrace();            
         }
     }
     
@@ -253,5 +265,6 @@ public class VeriTabaniIslemleri implements Baglanti {
         }
         return rs;
     }
+
     
 }

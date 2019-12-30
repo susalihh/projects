@@ -201,7 +201,7 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d9" green="b3" red="52" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="HASTALARI L&#x130;STELE"/>
+                <Property name="text" type="java.lang.String" value="L&#x130;STELE"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listeleButtonActionPerformed"/>

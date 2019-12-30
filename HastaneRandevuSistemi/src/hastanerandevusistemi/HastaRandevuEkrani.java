@@ -78,6 +78,7 @@ public class HastaRandevuEkrani extends javax.swing.JFrame {
         randevularTable = new javax.swing.JTable();
         doktorlarComboBox = new javax.swing.JComboBox<>();
         geriButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -155,6 +156,13 @@ public class HastaRandevuEkrani extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Branştaki Doktorları Ara");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -164,18 +172,21 @@ public class HastaRandevuEkrani extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(bransComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bransComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 232, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(doktorlarComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(doktorlarComboBox, 0, 254, Short.MAX_VALUE)
+                            .addComponent(randevuAlButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tarihComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(saatComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(randevuAlButton, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(geriButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(geriButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(tarihComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(saatComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -191,9 +202,10 @@ public class HastaRandevuEkrani extends javax.swing.JFrame {
                     .addComponent(doktorlarComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
                     .addComponent(randevuAlButton)
                     .addComponent(geriButton))
-                .addGap(45, 45, 45))
+                .addGap(130, 130, 130))
         );
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -217,7 +229,7 @@ public class HastaRandevuEkrani extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addGap(86, 86, 86))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -228,7 +240,7 @@ public class HastaRandevuEkrani extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -265,23 +277,12 @@ public class HastaRandevuEkrani extends javax.swing.JFrame {
     private void bransComboBoxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bransComboBoxMouseClicked
         
     }//GEN-LAST:event_bransComboBoxMouseClicked
-
+String brans;
     private void bransComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bransComboBoxActionPerformed
-         String brans= String.valueOf(bransComboBox.getSelectedItem());
+        brans= String.valueOf(bransComboBox.getSelectedItem());
         doktorlarComboBox.removeAllItems();
         
-        ResultSet rs ;
-        DoktorIslemler di = new DoktorIslemler(0,null,null,brans);
-        rs = di.doktorBransGetir();
-        
-
-        try {
-            while(rs.next()){
-                doktorlarComboBox.addItem(rs.getString("doktorAd")+" "+rs.getString("doktorSoyad"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+      
     }//GEN-LAST:event_bransComboBoxActionPerformed
 
     private void bransComboBoxİtemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_bransComboBoxİtemStateChanged
@@ -308,6 +309,21 @@ public class HastaRandevuEkrani extends javax.swing.JFrame {
         ge.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_geriButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        ResultSet rs ;
+        DoktorIslemler di = new DoktorIslemler(0,null,null,brans);
+        rs = di.doktorBransGetir();
+        
+
+        try {
+            while(rs.next()){
+                doktorlarComboBox.addItem(rs.getString("doktorAd")+" "+rs.getString("doktorSoyad"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -351,6 +367,7 @@ public class HastaRandevuEkrani extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> bransComboBox;
     private javax.swing.JComboBox<String> doktorlarComboBox;
     private javax.swing.JButton geriButton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
